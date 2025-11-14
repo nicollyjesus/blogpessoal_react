@@ -1,5 +1,5 @@
 import './App.css'
-import Contador from './pages/cadastro/Cadastro'
+import Contador from './pages/cadastro/Contador'
 import Login from './pages/login/Login'
 import Home from './pages/home/Home'
 import Tarefa from './pages/tarefa/Tarefa'

@@ -1,4 +1,4 @@
-import { LinkedinLogoIcon ,GithubLogoIcon,  } from "@phosphor-icons/react";
+import { LinkedinLogoIcon ,GithubLogoIcon,  } from "@phosphor-icons/react"
 
 
 function Footer(){

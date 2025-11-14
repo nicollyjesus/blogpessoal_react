@@ -18,7 +18,7 @@ function Footer(){
             <a href="https://www.linkedin.com/in/nicolly-jesus/" target= "_blank">
             <LinkedinLogoIcon size={48} weight="bold"/>
             </a>
-            <a href="https://github.com/nicollyjesus" target= "_blank">
+            <a href="https://github.com/ThuanyAline" target= "_blank">
             <GithubLogoIcon size={48} weight="bold"/>
             </a>
             </div>

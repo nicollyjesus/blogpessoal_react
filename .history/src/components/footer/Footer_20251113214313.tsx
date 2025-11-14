@@ -3,7 +3,7 @@ import { LinkedinLogoIcon ,GithubLogoIcon,  } from "@phosphor-icons/react";
 
 function Footer(){
 
-       const data = new Date().getFullYear()
+       let data = new Date().getFullYear()
 
        return (
 <>
@@ -15,10 +15,10 @@ function Footer(){
             </p>
         <p className="text-lg"> Acesse minhas redes sociais</p>
         <div className="flex gap-2">
-            <a href="https://www.linkedin.com/in/nicolly-jesus/" target= "_blank">
+            <a href="https://www.linkedin.com/in/thuanyalinesilva/" target= "_blank">
             <LinkedinLogoIcon size={48} weight="bold"/>
             </a>
-            <a href="https://github.com/nicollyjesus" target= "_blank">
+            <a href="https://github.com/ThuanyAline" target= "_blank">
             <GithubLogoIcon size={48} weight="bold"/>
             </a>
             </div>

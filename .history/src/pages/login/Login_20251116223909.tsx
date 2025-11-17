@@ -2,7 +2,7 @@ import { useContext, useEffect, useState, type ChangeEvent, type FormEvent } fro
 import { Link, useNavigate } from "react-router-dom"
 import type UsuarioLogin from "../../models/UsuarioLogin"
 import { AuthContext } from "../../contexts/AuthContext"
-import { ClipLoader } from "react-spinners"
+import { ClipLoader } from "react-s"
 
 function Login() {
 	const navigate = useNavigate()

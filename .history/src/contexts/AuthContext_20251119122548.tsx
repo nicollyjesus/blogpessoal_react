@@ -1,12 +1,14 @@
 import { useState, type ReactNode } from "react";
-import { AuthContext } from "./AuthContextValue";
 import type UsuarioLogin from "../models/UsuarioLogin";
 import { login } from "../services/Service";
-
+import { AuthContext } from "./AuthContextValue";
 
 interface AuthProviderProps{
     children: ReactNode
 }
+}
+
+export const AuthContext = createContext({} as AuthContextProps)
 
 export function AuthProvider({ children }: AuthProviderProps){
 

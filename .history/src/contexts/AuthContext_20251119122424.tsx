@@ -1,12 +1,20 @@
-import { useState, type ReactNode } from "react";
-import { AuthContext } from "./AuthContextValue";
+import { createContext, useState, type ReactNode } from "react";
 import type UsuarioLogin from "../models/UsuarioLogin";
 import { login } from "../services/Service";
 
 
+interface AuthContextProps{
+    usuario: UsuarioLogin
+    handleLogout(): void 
+    handleLogin(usuario: UsuarioLogin): Promise<void>
+    isLoading: boolean
+}
+
 interface AuthProviderProps{
     children: ReactNode
 }
+
+export const AuthContext = createContext({} as AuthContextProps)
 
 export function AuthProvider({ children }: AuthProviderProps){
 
@@ -31,7 +39,6 @@ export function AuthProvider({ children }: AuthProviderProps){
             await login(`/usuarios/logar`, usuarioLogin, setUsuario);
             alert("Usuário autenticado com sucesso!");
         }catch(error){
-            console.error(error);
             alert("Os dados do usuários estão inconsistentes!")
         }
 

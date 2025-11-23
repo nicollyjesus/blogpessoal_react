@@ -1,12 +1,37 @@
-import { useState, type ReactNode } from "react";
-import { AuthContext } from "./AuthContextValue";
+import { createContext, useState, type ReactNode } from "react";
 import type UsuarioLogin from "../models/UsuarioLogin";
 import { login } from "../services/Service";
 
 
+interface AuthContextProps{
+    usuario: UsuarioLogin
+    handleLogout(): void 
+    handleLogin(usuario: UsuarioLogin): Promise<void>
+    isLoading: boolean
+}
+
 interface AuthProviderProps{
     children: ReactNode
 }
+
+/**
+ * React context that provides authentication state and actions throughout the app.
+ *
+ * The context value conforms to the AuthContextProps interface and typically
+ * contains the current user (or null), authentication token/status, and functions
+ * to perform authentication-related operations (e.g. login, logout, refreshToken).
+ *
+ * Note: the exported context is created with an empty object cast to AuthContextProps
+ * as a placeholder. Consumers should access this context only when wrapped by the
+ * corresponding provider to avoid relying on the placeholder default.
+ *
+ * @example
+ * // inside a component
+ * const { user, login, logout } = useContext(AuthContext)
+ *
+ * @see AuthContextProps
+ */
+export const AuthContext = createContext({} as AuthContextProps)
 
 export function AuthProvider({ children }: AuthProviderProps){
 
